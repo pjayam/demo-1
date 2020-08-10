@@ -19,7 +19,7 @@ Output should be  : 16 . One could have bought 10 B s for 1 Rs each and 3 of Ds 
 Please make necessary assumptions and document it in your solution.	
 ```
 
-Create a web page to to provide input and calculate button to hit the API.
+Created a web page to to provide input and calculate button to hit the API.
 Download and start the spring boot application then hit the below Index url to view the page.
 Provide any number for which you want to calculate number of toys can be bought.
 
