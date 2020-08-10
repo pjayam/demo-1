@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Main Page</title>
+</head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$("#calculate").click(function() {
+			
+			if( !$('#money').val() ) {
+				alert("Please enter Money");
+			} else {
+				$.ajax({
+					url : 'http://localhost:8080/toys/input',
+					type : "GET",
+					data : {
+						"rupees" : $('#money').val()
+					},
+					cache : false,
+					dataType : "html",
+					success : function(response) {
+						$("#result").text("Result : " + response);
+					}
+				});
+			}
+			
+		});
+
+	});
+</script>
+<body>
+	<h2>Find Maximum number of toys can be bought</h2>
+	<div>
+		Prices : A - Rs.5, &nbsp;B - Rs.1, &nbsp;C- Rs 3, &nbsp;D- Rs.
+		2,&nbsp; E - Rs.8<br>
+		<br> Items Shop S has : 1 A,&nbsp; 10 B,&nbsp; 5 C,&nbsp; 3
+		D,&nbsp; 0 E.
+	</div>
+	<br>
+	<br> Enter Rupees :
+	<input type="number" placeholder="Enter Money" id="money">
+	<br>
+	<br>
+	<input type="button" value="Calculcate" id="calculate">
+	<br>
+	<br>
+	<br>
+	<div id="result"></div>
+
+</body>
+</html>
