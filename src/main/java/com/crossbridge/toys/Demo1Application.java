@@ -20,7 +20,8 @@ public class Demo1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Demo1Application.class, args);
 		Map<String, Integer> sortedPrice = AppUtil.sortByValue(AppUtil.toysPrice); 
-		
+
+
 		int count = 0;
 		int left = 25;
 		for (Entry<String, Integer> entry : sortedPrice.entrySet()) {
