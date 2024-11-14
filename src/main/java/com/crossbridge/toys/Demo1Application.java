@@ -21,7 +21,8 @@ public class Demo1Application {
 		SpringApplication.run(Demo1Application.class, args);
 		Map<String, Integer> sortedPrice = AppUtil.sortByValue(AppUtil.toysPrice); 
 
-//sample program 5
+//sample program 12
+
 		int count = 0;
 		int left = 25;
 		for (Entry<String, Integer> entry : sortedPrice.entrySet()) {
